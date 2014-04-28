@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+<div style='float:right'>
+<a href="/WelcomePage">Go Back</a><br/>
+</div>
+<table border="2" border-collapse:collapse>
+<tr padding:5px>
+  <th padding:20px>First Name</th>
+  <th padding:20px>Last Name</th>		
+  <th padding:20px>Address</th>
+  <th padding:20px>City</th>
+  <th padding:20px>State</th>
+  <th padding:20px>Zip Code</th>
+ </tr>
+<% for(var i = 0; i < result.length; i++){ %>
+<br/>
+<tr>
+<td><%= result[i].FirstName %></td>
+
+<td><%= result[i].LastName %></td>
+
+<td><%= result[i].Address %></td>
+
+<td><%= result[i].City %></td>
+
+<td><%= result[i].State %></td>
+
+<td><%= result[i].ZipCode %><br/></td>
+</tr>
+<% } %>
+</table>
+</body>
+</html>

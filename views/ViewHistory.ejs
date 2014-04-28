@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+
+<div style='float:right'>
+<a href="/Welcome">Go Back</a><br/>
+</div>
+<table border="2" border-collapse:collapse>
+<tr padding:5px>
+  <th padding:20px>MovieId</th>
+  <th padding:20px>Return Date</th>		
+  <th padding:20px>Issue Date</th>
+  <th padding:20px>Total</th>
+  <th padding:20px>RentPaymentStatus</th>
+ </tr>
+<% for(var i = 0; i < result.length; i++){ %>
+<br/>
+<tr>
+<td><%= result[i].MovieID %></td>
+
+<td><%= result[i].ReturnDate %></td>
+
+<td><%= result[i].IssueDate %></td>
+
+<td><%= result[i].TotalAmount %></td>
+
+<td><%= result[i].rentpaymentstatus %></td>
+
+</tr>
+<% } %>
+</table>
+</body>
+</html>

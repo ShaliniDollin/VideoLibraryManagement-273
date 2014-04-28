@@ -1,0 +1,31 @@
+<html>
+<div style='float:right'>
+<a href="/WelcomePage">Go Back</a><br/>
+</div> <body>
+<h1>Search Person Information Result</h1>
+
+<table border="1" cellspacing="1" cellpadding="5">
+
+  <tr>
+    <td>MemberShipID</td>
+    <td>FirstName</td>
+    <td>LastName</td>
+    <td>City</td>
+    <td>State</td>
+    <td>ZipCode</td>
+    <td>MemberTypeID</td>
+  </tr>
+<% for (var key in data) { %>
+  <tr>
+  	<td><%= data[key].MemberShipID %></td>
+	<td><%= data[key].FirstName %></td>
+	<td><%= data[key].LastName %></td>
+	<td><%= data[key].City %></td>
+	<td><%= data[key].State %></td>
+	<td><%= data[key].ZipCode %></td>
+	<td><%= data[key].MemberTypeID %></td>  
+  </tr>	 
+<% }   %>
+</table>
+</body>
+</html>

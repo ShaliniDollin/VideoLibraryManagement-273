@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+<div style='float:right'>
+<a href="/WelcomePage">Go Back</a><br/>
+</div>
+  </head>
+  <body>
+    <h1>Your Search Results</h1>
+   
+<p>Select the movie to issue it</p>
+    </div>
+<form action = "/issueMovie" name="form2" method ="post">
+<table border="2" border-collapse:collapse>
+<tr padding:5px>
+<th padding:20px>Select</th>
+  <th padding:20px>Name</th>
+  <th padding:20px>Banner</th>		
+  <th padding:20px>Date</th>
+  <th padding:20px>RentAmount</th>
+  <th padding:20px>Category</th>
+  <th padding:20px>NoOfCopies</th>
+ </tr>
+<% for(var i = 0; i < result.length; i++){ %>
+<br/>
+<tr>
+<td><input type="radio" name="MovieId" value="<%= result[i].MovieID %>" /></td>
+<td><%= result[i].Name %></td>
+
+<td><%= result[i].Banner %></td>
+
+<td><%= result[i].Date %></td>
+
+<td><%= result[i].rentamount %></td>
+
+<td><%= result[i].Category %></td>
+
+<td><%= result[i].noofcopies %><br/></td>
+</tr>
+<% } %>
+</table>
+</br>
+
+<input type= "text" name = "membershipID" id= "membershipID">
+<input type="submit" name="submit" value="Issue Movie"/>
+
+</form>
+  </body>
+</html>

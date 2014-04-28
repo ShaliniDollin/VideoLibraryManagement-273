@@ -1,0 +1,36 @@
+<html>
+<body>
+<h1>Bill</h1>
+<table border="1" cellspacing="1" cellpadding="5">
+
+  <tr>
+    <td>MemberShipID</td>
+    <td>MoiveID</td>
+    <td>IssueDate</td>
+    <td>ReturnDate</td>
+    <td>TotalAmount</td>
+  </tr>
+<% for (var key in data) { %>
+  <tr>
+  	<td><%= data[key].MemberShipID %></td>
+	<td><%= data[key].MovieID %></td>
+	<td><%= data[key].IssueDate %></td>
+	<td><%= data[key].ReturnDate %></td>
+	<td><%= data[key].TotalAmount %></td>  
+  </tr>	 
+<% }   %>
+
+  <tr>
+	<td colspan="5" align="right">TotalAmount:<%=total%>
+	 	<form id="form1" action="/payBill/<%= JSON.stringify(data) %>" method="post">
+	    <input type="submit" value="PayBill" style="width:100px">
+	    </form>
+	</td>
+  </tr>
+ 
+</table>
+
+
+
+</body>
+</html>

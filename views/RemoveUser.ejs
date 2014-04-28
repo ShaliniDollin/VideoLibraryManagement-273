@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <div style='float:right'>
+<a href="/WelcomePage">Go Back</a><br/>
+</div> 
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+<% if(message!=''&&message!=null){ %>
+<%= message %>
+
+<%}
+%>
+<form method ="post" action="/removeUser">
+<p>MemberShip ID:<input type="text" name="membershipID" id="membershipID"/>
+ <input type="submit" Value ="Submit">
+ </form>
+ </body>
+</html>

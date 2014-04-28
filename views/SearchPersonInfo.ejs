@@ -1,0 +1,20 @@
+<html>
+<div style='float:right'>
+<a href="/WelcomePage">Go Back</a><br/>
+</div> <body>
+<p> Search Person information </p>
+    <form name="myform" action="/searchPersonInfoResult" method="POST">
+    <select name ="dropdown">
+	  <option value="MemberShipID">MemberShipID</option>
+	  <option value="FirstName">FirstName</option>
+	  <option value="LastName">LastName</option>
+	  <option value="City">City</option>
+	  <option value="State">State</option>
+	  <option value="ZipCode">ZipCode</option>
+	  <option value="MemberTypeID">MemberTypeID</option>
+	</select>
+	<input type="text" name="searchValue" value="">
+	<input type="submit" value="Search">
+	</form>
+</body>
+</html>
